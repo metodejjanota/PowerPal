@@ -1,32 +1,38 @@
-//
-//  PowerPalApp.swift
-//  PowerPal
-//
-//  Created by Metoděj Janota on 14.03.2025.
-//
-
 import SwiftUI
 import SwiftData
 
+
 @main
 struct PowerPalApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @StateObject private var batteryManager = BatteryManager()
+    @State private var statusBarController: StatusBarController?
+    
+    init() {
+        
+    }
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        
+        MenuBarExtra {
+        
+            PopoverView(batteryManager: batteryManager)
+        } label: {
+        
+            Image(systemName: "battery.75")
         }
-        .modelContainer(sharedModelContainer)
+        .menuBarExtraStyle(.window)
+        
+        
+        WindowGroup {
+            EmptyView()
+                .frame(width: 0, height: 0)
+                .opacity(0)
+                .onAppear {
+                    statusBarController = StatusBarController(batteryManager: batteryManager)
+                }
+        }
+        .defaultSize(width: 0, height: 0)
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
     }
 }

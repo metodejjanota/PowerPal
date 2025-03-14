@@ -10,9 +10,33 @@
 		E5E1911F2D84D53F00376CDE /* PowerPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E5356AE32D84E2D60091AB28 /* Exceptions for "PowerPal" folder in "PowerPal" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Extensions.swift,
+			);
+			target = E5E1911E2D84D53F00376CDE /* PowerPal */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		E5356AE42D84E2D60091AB28 /* Exceptions for "PowerPal" folder in "Copy Bundle Resources" phase from "PowerPal" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = E5E1911D2D84D53F00376CDE /* Resources */;
+			membershipExceptions = (
+				Extensions.swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E5E191212D84D53F00376CDE /* PowerPal */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E5356AE32D84E2D60091AB28 /* Exceptions for "PowerPal" folder in "PowerPal" target */,
+				E5356AE42D84E2D60091AB28 /* Exceptions for "PowerPal" folder in "Copy Bundle Resources" phase from "PowerPal" target */,
+			);
 			path = PowerPal;
 			sourceTree = "<group>";
 		};
