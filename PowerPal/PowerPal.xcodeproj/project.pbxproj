@@ -14,7 +14,7 @@
 		E5356AE32D84E2D60091AB28 /* Exceptions for "PowerPal" folder in "PowerPal" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Extensions.swift,
+				Utils/Extensions.swift,
 			);
 			target = E5E1911E2D84D53F00376CDE /* PowerPal */;
 		};
@@ -25,7 +25,7 @@
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			buildPhase = E5E1911D2D84D53F00376CDE /* Resources */;
 			membershipExceptions = (
-				Extensions.swift,
+				Utils/Extensions.swift,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
